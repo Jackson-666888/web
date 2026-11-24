@@ -20,8 +20,8 @@
       <section class="intro" aria-labelledby="about-title">
         <h1 id="about-title">你好，我是 Jackson</h1>
         <p>
-          这是一个最简单的个人主页。下面有一个用原生 HTML、CSS 和 JavaScript
-          写的计算器——没有框架，逻辑和样式都写在本地文件里。
+          这是一个最简单的个人主页。下面有用原生 HTML、CSS 和 JavaScript
+          写的小工具——没有框架，逻辑和样式都写在本地文件里。
         </p>
       </section>
 
@@ -59,6 +59,48 @@
           </div>
         </div>
       </section>
+
+      <section class="tetris-section" aria-labelledby="tetris-title">
+        <h2 id="tetris-title">俄罗斯方块</h2>
+        <div class="tetris" role="application" aria-label="俄罗斯方块">
+          <div class="tetris-board-wrap">
+            <canvas id="tetris-board" width="300" height="600" aria-label="游戏区域"></canvas>
+            <div class="tetris-overlay" id="tetris-overlay" hidden>
+              <p class="tetris-overlay-text" id="tetris-overlay-text">按开始</p>
+            </div>
+          </div>
+          <aside class="tetris-side">
+            <div class="tetris-stat">
+              <span class="tetris-stat-label">分数</span>
+              <span class="tetris-stat-value" id="tetris-score">0</span>
+            </div>
+            <div class="tetris-stat">
+              <span class="tetris-stat-label">消除</span>
+              <span class="tetris-stat-value" id="tetris-lines">0</span>
+            </div>
+            <div class="tetris-stat">
+              <span class="tetris-stat-label">等级</span>
+              <span class="tetris-stat-value" id="tetris-level">1</span>
+            </div>
+            <div class="tetris-next">
+              <span class="tetris-stat-label">下一个</span>
+              <canvas id="tetris-next" width="96" height="96" aria-label="下一个方块"></canvas>
+            </div>
+            <div class="tetris-actions">
+              <button type="button" class="tetris-btn tetris-btn-primary" id="tetris-start">开始</button>
+              <button type="button" class="tetris-btn" id="tetris-pause" disabled>暂停</button>
+            </div>
+            <p class="tetris-hint">方向键移动 · ↑ 旋转 · 空格落地 · P 暂停</p>
+          </aside>
+          <div class="tetris-pad" aria-label="触控操作">
+            <button type="button" class="tetris-pad-btn" data-tetris="left" aria-label="左移">←</button>
+            <button type="button" class="tetris-pad-btn" data-tetris="down" aria-label="下落">↓</button>
+            <button type="button" class="tetris-pad-btn" data-tetris="right" aria-label="右移">→</button>
+            <button type="button" class="tetris-pad-btn" data-tetris="rotate" aria-label="旋转">↻</button>
+            <button type="button" class="tetris-pad-btn tetris-pad-drop" data-tetris="drop" aria-label="硬降">落地</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -67,5 +109,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="tetris.js"></script>
 </body>
 </html>
