@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipeng · 个人网站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <p class="brand">Jackson</p>
+      <p class="tagline">产品经理 · 用代码把想法做出来</p>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="about-title">
+        <h1 id="about-title">你好，我是 Jackson</h1>
+        <p>
+          这是一个最简单的个人主页。下面有一个用原生 HTML、CSS 和 JavaScript
+          写的计算器——没有框架，逻辑和样式都写在本地文件里。
+        </p>
+      </section>
+
+      <section class="calculator-section" aria-labelledby="calc-title">
+        <h2 id="calc-title">计算器</h2>
+        <div class="calculator" role="application" aria-label="简易计算器">
+          <div class="display" aria-live="polite">
+            <span class="expression" id="expression"></span>
+            <span class="result" id="display">0</span>
+          </div>
+          <div class="keys">
+            <button type="button" class="key key-util" data-action="clear">AC</button>
+            <button type="button" class="key key-util" data-action="sign">±</button>
+            <button type="button" class="key key-util" data-action="percent">%</button>
+            <button type="button" class="key key-op" data-action="operator" data-value="/">÷</button>
+
+            <button type="button" class="key" data-action="digit" data-value="7">7</button>
+            <button type="button" class="key" data-action="digit" data-value="8">8</button>
+            <button type="button" class="key" data-action="digit" data-value="9">9</button>
+            <button type="button" class="key key-op" data-action="operator" data-value="*">×</button>
+
+            <button type="button" class="key" data-action="digit" data-value="4">4</button>
+            <button type="button" class="key" data-action="digit" data-value="5">5</button>
+            <button type="button" class="key" data-action="digit" data-value="6">6</button>
+            <button type="button" class="key key-op" data-action="operator" data-value="-">−</button>
+
+            <button type="button" class="key" data-action="digit" data-value="1">1</button>
+            <button type="button" class="key" data-action="digit" data-value="2">2</button>
+            <button type="button" class="key" data-action="digit" data-value="3">3</button>
+            <button type="button" class="key key-op" data-action="operator" data-value="+">+</button>
+
+            <button type="button" class="key key-zero" data-action="digit" data-value="0">0</button>
+            <button type="button" class="key" data-action="decimal">.</button>
+            <button type="button" class="key key-eq" data-action="equals">=</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>纯 HTML / CSS / JS · 无框架</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
